@@ -32,6 +32,7 @@
       /* Typography */
       --font-space-mono: 'Space Mono', monospace;
       --font-size-input: 24px;
+      --font-bold: 700;
     }
   </style>
 
@@ -41,26 +42,29 @@
     <header class="py-8">
       <img src="images/logo.svg" alt="Logo">
     </header>
-    <section class="bg-white w-full lg:w-[900px] md:w-[768px] min-h-[100vh] md:min-h-auto rounded-lg ">
-      Bill
-      
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-      
-      Number of People
-      
-      Tip Amount
-      / person
-      
-      Total
-      / person
-      
-      Reset
+    <section class="flex flex-col md:flex-row gap-6 bg-white w-full lg:w-[900px] md:w-[768px] min-h-[100vh] md:min-h-auto rounded-lg p-6">
+      <article class="input md:w-1/2">
+        Bill
+        
+        Select Tip %
+        5%
+        10%
+        15%
+        25%
+        50%
+        Custom
+        
+        Number of People
+      </article>
+      <article class="output md:w-1/2">
+        Tip Amount
+        / person
+        
+        Total
+        / person
+        
+        Reset
+      </article>
     </section>
   </main>
   
