@@ -2,13 +2,12 @@ const billValue = document.getElementById('bill');
 const personValue = document.getElementById('person');
 const percentageButtons = document.querySelectorAll('.my-4 button');
 
-let amount = 0.00;
-let total = 0.00;
+let amount = 0.0;
+let total = 0.0;
 
 function showAns(percentage) {
     let bill = billValue.value.trim();
     let person = personValue.value.trim();
-    console.log('Amount: ', percentage);
 
     if (dataIsValid('bill', bill) && dataIsValid('person', person)) {
         const buttonContent = percentage.trim();
