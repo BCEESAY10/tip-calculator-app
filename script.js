@@ -54,10 +54,7 @@ const dataIsValid = (key, value) => {
 }
 
 function reset(){
-    billValue.value = "";
-    amount = 0.00;
-    total = 0.00;
-    console.log("Reset")
+  window.location.reload();
 }
 
 percentageButtons.forEach((button) => {
