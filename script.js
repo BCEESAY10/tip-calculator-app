@@ -32,9 +32,15 @@ function showAns(percentage) {
 
 
 const validations = {
-    bill: (value) => !!value.trim() || value.trim() == NaN,
-    person: (value) => !!value.trim() || value.trim() == Nan
-}
+    bill: (value) => {
+        const num = Number(value);
+        return value.trim() !== "" && !isNaN(num) && num > 0;
+    },
+    person: (value) => {
+        const num = Number(value);
+        return value.trim() !== "" && !isNaN(num) && num > 0;
+    }
+};
 
 const dataIsValid = (key, value) => {
     return validations[key](value);
