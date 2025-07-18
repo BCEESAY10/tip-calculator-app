@@ -9,14 +9,25 @@ function showAns(percentage) {
     let bill = billValue.value.trim();
     let person = personValue.value.trim();
 
-    if (dataIsValid('bill', bill) && dataIsValid('person', person)) {
-        const buttonContent = percentage.trim();
-        const numberOnly = parseInt(buttonContent.replace(/\D/g, ""), 10);
-        amount = ((numberOnly)/100 * bill)/person;
-        console.log('Amount: ', amount);
-    } else {
+    if (!dataIsValid('bill', bill) || !dataIsValid('person', person)) {
         console.log("Invalid input");
+        alert("Invalid input");
+        return;
     }
+
+    const buttonContent = percentage.trim();
+    const numberOnly = parseInt(buttonContent.replace(/\D/g, ""), 10);
+
+    if (isNaN(numberOnly)) {
+        console.log("Percentage value is incorrect");
+        alert("We shall fix the custom value soon!!!")
+        return;
+    }
+
+    amount = ((numberOnly) / 100 * bill) / person;
+    total += amount;
+    console.log('Amount: ', amount.toFixed(2));
+    console.log('Total: ', total.toFixed(2));
 }
 
 
