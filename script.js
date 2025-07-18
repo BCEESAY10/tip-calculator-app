@@ -7,8 +7,8 @@ let amount = 0.0;
 let total = 0.0;
 
 function showAns(percentage) {
-    let bill = billValue.value.trim();
-    let person = personValue.value.trim();
+    const bill = billValue.value.trim();
+    const person = personValue.value.trim();
 
     if (!dataIsValid('bill', bill) || !dataIsValid('person', person)) {
         console.log("Invalid input");
