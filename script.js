@@ -1,19 +1,25 @@
 const billValue = document.getElementById('bill');
 const personValue = document.getElementById('person');
-const percentageButtons = document.querySelectorAll('button');
+const percentageButtons = document.querySelectorAll('.my-4 button');
 
-function showAns() {
+let amount = 0.00;
+let total = 0.00;
+
+function showAns(percentage) {
     let bill = billValue.value.trim();
     let person = personValue.value.trim();
+    console.log('Amount: ', percentage);
 
     if (dataIsValid('bill', bill) && dataIsValid('person', person)) {
-        console.log("Bill: ", bill, " Person: ", person);
-        // Show your answer here
+        const buttonContent = percentage.trim();
+        const numberOnly = parseInt(buttonContent.replace(/\D/g, ""), 10);
+        amount = ((numberOnly)/100 * bill)/person;
+        console.log('Amount: ', amount);
     } else {
-        // Optionally show an error message
         console.log("Invalid input");
     }
 }
+
 
 const validations = {
     bill: (value) => !!value.trim() || value.trim() == NaN,
@@ -25,5 +31,5 @@ const dataIsValid = (key, value) => {
 }
 
 percentageButtons.forEach((button) => {
-    button.addEventListener('click', showAns);
-})
+    button.addEventListener('click', () => showAns(button.textContent));
+});
