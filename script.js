@@ -1,6 +1,7 @@
 const billValue = document.getElementById('bill');
 const personValue = document.getElementById('person');
 const percentageButtons = document.querySelectorAll('.my-4 button');
+const resetButton = document.getElementById('reset');
 
 let amount = 0.0;
 let total = 0.0;
@@ -52,6 +53,15 @@ const dataIsValid = (key, value) => {
     return validations[key](value);
 }
 
+function reset(){
+    billValue.value = "";
+    amount = 0.00;
+    total = 0.00;
+    console.log("Reset")
+}
+
 percentageButtons.forEach((button) => {
     button.addEventListener('click', () => showAns(button.textContent));
 });
+
+resetButton.addEventListener('click', reset);
