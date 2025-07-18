@@ -26,6 +26,12 @@ function showAns(percentage) {
 
     amount = ((numberOnly) / 100 * bill) / person;
     total += amount;
+
+    const amountBox = document.getElementById('amount');
+    const totalBox = document.getElementById('total');
+
+    amountBox.innerHTML = amount.toFixed(2);
+    totalBox.innerHTML = total.toFixed(2);
     console.log('Amount: ', amount.toFixed(2));
     console.log('Total: ', total.toFixed(2));
 }
