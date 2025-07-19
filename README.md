@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/BCEESAY10/tip-calculator-app)
-- Live Site URL: [Add live site URL here](https://bceesay10.github.io/tip-calculator-app/)
+- Solution URL: [https://github.com/BCEESAY10/tip-calculator-app](https://github.com/BCEESAY10/tip-calculator-app)
+- Live Site URL: [https://bceesay10.github.io/tip-calculator-app/](https://bceesay10.github.io/tip-calculator-app/)
 
 ## My process
 
