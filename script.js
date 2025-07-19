@@ -1,6 +1,7 @@
 const billValue = document.getElementById('bill');
 const personValue = document.getElementById('person');
 const percentageButtons = document.querySelectorAll('.my-4 button');
+const customValue = document.querySelectorAll('.my-4 input');
 const resetButton = document.getElementById('reset');
 
 let amount = 0.0;
@@ -21,7 +22,6 @@ function showAns(percentage) {
 
     if (isNaN(numberOnly)) {
         console.log("Percentage value is incorrect");
-        alert("We shall fix the custom value soon!!!")
         return;
     }
 
