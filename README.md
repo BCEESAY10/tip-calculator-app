@@ -45,7 +45,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -78,6 +77,7 @@ if (customInput) {
 }
 ```
 
+
 ### Continued development
 
 I want to keep learning and developing
@@ -90,6 +90,6 @@ I want to keep learning and developing
 
 ## Author
 
-- Website - [Add your name here](https://bamfa-portfolio.vercel.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/BCEESAY10)
+- Website - [My Portfolio](https://bamfa-portfolio.vercel.app)
+- Frontend Mentor - [@BCEESAY10](https://www.frontendmentor.io/profile/BCEESAY10)
 
