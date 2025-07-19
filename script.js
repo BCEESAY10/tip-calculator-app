@@ -16,13 +16,15 @@ function showAns(percentage) {
     return;
   }
 
-  const customInput = document.querySelector(".my-4 input");
-  if (customInput) {
-    customInput.addEventListener("input", function () {
-      showAns(customInput.value);
-    });
+  // If no percentage is provided, try to get it from the custom input
+  if (!percentage) {
+    const customInput = document.querySelector(".my-4 input");
+    if (customInput) {
+      percentage = customInput.value.trim();
+    }
   }
-  const buttonContent = percentage.trim();
+
+  const buttonContent = percentage ? percentage.trim() : "";
   const numberOnly = parseInt(buttonContent.replace(/\D/g, ""), 10);
 
   if (isNaN(numberOnly)) {
@@ -66,3 +68,10 @@ percentageButtons.forEach((button) => {
 });
 
 resetButton.addEventListener("click", reset);
+
+const customInput = document.querySelector(".my-4 input");
+if (customInput) {
+  customInput.addEventListener("input", function () {
+    showAns(customInput.value);
+  });
+}
